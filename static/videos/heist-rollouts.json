@@ -1,0 +1,124 @@
+{
+  "environment": "heist_afh",
+  "name": "Keys and Chests (K&C)",
+  "runtime": "local ood environment, CPU",
+  "novice_checkpoint": "/media/linux-data/data/goal-misgen/policy/icml/heist_afh/icml2_heist_exp0_0p/2026-07-24__13-42-04__seed_1111/model_200015872.pth",
+  "expert_checkpoint_source": "snoopy:/scr/pavel/data/goal-misgen/policy/heist400/heist_afh/heist400_heist_exp0_50p/2026-08-19__16-01-20__seed_1111/model_400031744.pth",
+  "expert_checkpoint_local": "/media/linux-data/code/goal-misgen/yrc-bench-fork/experiments/kc-website/checkpoints/expert-exp0-400m.pth",
+  "notes": [
+    "The four OOD examples use the same level seed, 102177.",
+    "Selected examples illustrate behavior, not estimated performance.",
+    "Acting policies sample actions, except for the reused greedy novice ID example.",
+    "Full episodes are preserved at their original playback speed; palette encoding reduces file sizes.",
+    "Coordination filenames contain the renderer batch step AFHP; these filenames are not paper level-AFHP estimates.",
+    "The original multi-level recording runs were interrupted after these selected clips finished; unused tail episodes are not part of this set."
+  ],
+  "clips": [
+    {
+      "file": "heist-success-id.gif",
+      "label": "Novice: ID success",
+      "seed": 102085,
+      "is_ood": false,
+      "policy": "novice",
+      "greedy": true,
+      "keys_collected": 3,
+      "num_keys": 3,
+      "total_chests": 6,
+      "completed": true,
+      "source": "/media/linux-data/code/goal-misgen/yrc-bench-fork/experiments/evals/heist-id-ood-videos/heist_novice_id_ood_videos/20260912_171836/videos/test/episode_001_id_seed102085_return_3.00.gif",
+      "reused_existing": true,
+      "return": 3,
+      "dimensions": [
+        512,
+        1024
+      ],
+      "frames": 48,
+      "bytes": 999895,
+      "duration_ms": 5800
+    },
+    {
+      "file": "heist-failure-timeout.gif",
+      "label": "Novice: OOD timeout",
+      "seed": 102177,
+      "is_ood": true,
+      "policy": "novice",
+      "greedy": false,
+      "keys_collected": 6,
+      "num_keys": 6,
+      "total_chests": 3,
+      "completed": false,
+      "source": "/media/linux-data/code/goal-misgen/yrc-bench-fork/experiments/kc-website/failures/ood_timeout/ood_timeout_001_seed102177_keys6-6_chests2-3_ret2.00.gif",
+      "return": 2,
+      "dimensions": [
+        512,
+        1024
+      ],
+      "frames": 997,
+      "bytes": 29296801,
+      "duration_ms": 101000
+    },
+    {
+      "file": "heist-expert.gif",
+      "label": "Expert: OOD success",
+      "seed": 102177,
+      "is_ood": true,
+      "policy": "expert400m",
+      "greedy": false,
+      "keys_collected": 3,
+      "num_keys": 6,
+      "total_chests": 3,
+      "completed": true,
+      "source": "/media/linux-data/code/goal-misgen/yrc-bench-fork/experiments/kc-website/expert/test/episode_007_ood_seed102177_return_3.00.gif",
+      "return": 3,
+      "dimensions": [
+        512,
+        1024
+      ],
+      "frames": 103,
+      "bytes": 2559818,
+      "duration_ms": 11400
+    },
+    {
+      "file": "heist-success-max-prob.gif",
+      "label": "MaxProb: OOD success",
+      "seed": 102177,
+      "is_ood": true,
+      "policy": "max_prob",
+      "threshold": 0.5,
+      "greedy": false,
+      "total_chests": 3,
+      "completed": true,
+      "source": "/media/linux-data/code/goal-misgen/yrc-bench-fork/experiments/kc-website/max-prob/all/all/episode_3_afhp_0.38_all.gif",
+      "return": 3,
+      "dimensions": [
+        512,
+        1104
+      ],
+      "frames": 128,
+      "bytes": 5532510,
+      "duration_ms": 13800
+    },
+    {
+      "file": "heist-success-wait.gif",
+      "label": "Wait then ask: OOD success",
+      "seed": 102177,
+      "is_ood": true,
+      "policy": "wait",
+      "threshold": 40,
+      "greedy": false,
+      "keys_collected": 5,
+      "num_keys": 6,
+      "total_chests": 3,
+      "completed": true,
+      "source": "/media/linux-data/code/goal-misgen/yrc-bench-fork/experiments/kc-website/wait/all/all/episode_3_afhp_0.60_all.gif",
+      "return": 3,
+      "dimensions": [
+        512,
+        1104
+      ],
+      "frames": 105,
+      "bytes": 3049509,
+      "duration_ms": 11500
+    }
+  ]
+}

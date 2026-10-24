@@ -160,7 +160,7 @@
           <h3 class="title is-3">Videos</h3>
           <div class="content has-text-justified">
             <p>
-              Example behavior observed in Coinrun and Maze. The videos show the down-sampled agent view at the top and the human observation at the bottom. The bar at the top shows the deferral score and turns red when the agent asks the expert for help.
+              Example behavior observed in Coinrun, Maze, and Keys and Chests (K&amp;C). The videos show the down-sampled agent view at the top and the human observation at the bottom. In coordination videos, the bar turns red when the expert acts; score-based methods also display the deferral score.
             </p>
           </div>
 
@@ -209,6 +209,33 @@
             <figure class="video-card">
               <img src="./static/videos/maze-success-heuristic.gif" alt="Maze Success Heuristic">
               <figcaption>Maze Success Heuristic</figcaption>
+            </figure>
+          </div>
+
+          <h4 class="title is-4">Keys and Chests (K&amp;C)</h4>
+          <div class="content has-text-justified">
+            <p>The four out-of-distribution (OOD) examples use the same level. The novice collects all six keys but opens only two of three chests before timing out. The expert, MaxProb, and wait-then-ask policies open all three chests. The wait policy asks for help after 40 steps.</p>
+          </div>
+          <div class="video-grid">
+            <figure class="video-card">
+              <img src="./static/videos/heist-success-id.gif" alt="K&amp;C Novice: ID success" loading="lazy">
+              <figcaption>Novice: ID success</figcaption>
+            </figure>
+            <figure class="video-card">
+              <img src="./static/videos/heist-failure-timeout.gif" alt="K&amp;C Novice: OOD timeout" loading="lazy">
+              <figcaption>Novice: OOD timeout</figcaption>
+            </figure>
+            <figure class="video-card">
+              <img src="./static/videos/heist-expert.gif" alt="K&amp;C Expert: OOD success" loading="lazy">
+              <figcaption>Expert: OOD success</figcaption>
+            </figure>
+            <figure class="video-card">
+              <img src="./static/videos/heist-success-max-prob.gif" alt="K&amp;C MaxProb: OOD success" loading="lazy">
+              <figcaption>MaxProb: OOD success</figcaption>
+            </figure>
+            <figure class="video-card">
+              <img src="./static/videos/heist-success-wait.gif" alt="K&amp;C Wait then ask: OOD success" loading="lazy">
+              <figcaption>Wait then ask: OOD success</figcaption>
             </figure>
           </div>
 
